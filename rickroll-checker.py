@@ -32,10 +32,7 @@ phrases = [
     "never gonna give you up",
 ]
 
-rickroll = False
-for phrase in phrases:
-    if phrase in video_content.lower():
-        rickroll = True
+rickroll = any(phrase in video_content.lower() for phrase in phrases)
 
 print("\nANALYSIS COMPLETED:")
 if rickroll:
